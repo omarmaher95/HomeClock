@@ -1,0 +1,170 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>5.1</ProjectVersion>
+    <ToolchainName>com.Atmel.AVRGCC8</ToolchainName>
+    <ProjectGuid>{67535ff8-a8ba-42ab-b004-93b36b9b835a}</ProjectGuid>
+    <avrdevice>ATmega324A</avrdevice>
+    <avrdeviceseries>none</avrdeviceseries>
+    <OutputType>Executable</OutputType>
+    <Language>C</Language>
+    <OutputFileName>$(MSBuildProjectName)</OutputFileName>
+    <OutputFileExtension>.elf</OutputFileExtension>
+    <OutputDirectory>$(MSBuildProjectDirectory)\$(Configuration)</OutputDirectory>
+    <AssemblyName>AVRGCC2</AssemblyName>
+    <Name>AVRGCC2</Name>
+    <RootNamespace>AVRGCC2</RootNamespace>
+    <ToolchainFlavour>Native</ToolchainFlavour>
+    <AsfVersion>2.11.1</AsfVersion>
+    <avrtoolinterface />
+    <avrtool>com.atmel.avrdbg.tool.simulator</avrtool>
+    <com_atmel_avrdbg_tool_simulator>
+      <ToolType>com.atmel.avrdbg.tool.simulator</ToolType>
+      <ToolName>AVR Simulator</ToolName>
+      <ToolNumber>
+      </ToolNumber>
+      <Channel>
+        <host>127.0.0.1</host>
+        <port>49365</port>
+        <ssl>False</ssl>
+      </Channel>
+    </com_atmel_avrdbg_tool_simulator>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <ToolchainSettings>
+      <AvrGcc>
+        <avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>True</avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>
+        <avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>True</avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>
+        <avrgcc.compiler.symbols.DefSymbols>
+          <ListValues>
+            <Value>GCC_MEGA_AVR</Value>
+          </ListValues>
+        </avrgcc.compiler.symbols.DefSymbols>
+        <avrgcc.compiler.directories.IncludePaths>
+          <ListValues>
+            <Value>D:\Desktop\04- RTOS\FreeRTOSv202107.00\FreeRTOS\Demo\AVR_ATMega323_WinAVR</Value>
+            <Value>D:\Desktop\04- RTOS\FreeRTOSv202107.00\FreeRTOS\Source\include</Value>
+            <Value>D:\Desktop\04- RTOS\FreeRTOSv202107.00\FreeRTOS\Source\portable\GCC\ATMega323</Value>
+            <Value>D:\Desktop\04- RTOS\FreeRTOSv202107.00\FreeRTOS\Source\portable\MemMang</Value>
+          </ListValues>
+        </avrgcc.compiler.directories.IncludePaths>
+        <avrgcc.compiler.optimization.level>Optimize for size (-Os)</avrgcc.compiler.optimization.level>
+        <avrgcc.compiler.optimization.PackStructureMembers>True</avrgcc.compiler.optimization.PackStructureMembers>
+        <avrgcc.compiler.optimization.AllocateBytesNeededForEnum>True</avrgcc.compiler.optimization.AllocateBytesNeededForEnum>
+        <avrgcc.compiler.warnings.AllWarnings>True</avrgcc.compiler.warnings.AllWarnings>
+        <avrgcc.linker.libraries.Libraries>
+          <ListValues>
+            <Value>m</Value>
+          </ListValues>
+        </avrgcc.linker.libraries.Libraries>
+      </AvrGcc>
+    </ToolchainSettings>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <ToolchainSettings>
+      <AvrGcc>
+  <avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>True</avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>
+  <avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>True</avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>
+  <avrgcc.compiler.symbols.DefSymbols>
+    <ListValues>
+      <Value>GCC_MEGA_AVR </Value>
+    </ListValues>
+  </avrgcc.compiler.symbols.DefSymbols>
+  <avrgcc.compiler.directories.IncludePaths>
+    <ListValues>
+      <Value>C:\Users\Maher\Downloads\osa</Value>
+      <Value>C:\Users\Maher\Documents\AVRStudio 5.1\AVRGCC2\AVRGCC2</Value>
+      <Value>C:\Users\Maher\Documents\AVRStudio 5.1\AVRGCC2\AVRGCC2\Drivers\MCAL</Value>
+      <Value>C:\Users\Maher\Documents\AVRStudio 5.1\AVRGCC2\AVRGCC2\Drivers\HAL</Value>
+      <Value>C:\Users\Maher\Documents\AVRStudio 5.1\AVRGCC2\AVRGCC2\Drivers</Value>
+    </ListValues>
+  </avrgcc.compiler.directories.IncludePaths>
+  <avrgcc.compiler.optimization.PackStructureMembers>True</avrgcc.compiler.optimization.PackStructureMembers>
+  <avrgcc.compiler.optimization.AllocateBytesNeededForEnum>True</avrgcc.compiler.optimization.AllocateBytesNeededForEnum>
+  <avrgcc.compiler.optimization.DebugLevel>Default (-g2)</avrgcc.compiler.optimization.DebugLevel>
+  <avrgcc.compiler.warnings.AllWarnings>True</avrgcc.compiler.warnings.AllWarnings>
+  <avrgcc.linker.libraries.Libraries>
+    <ListValues>
+      <Value>m</Value>
+    </ListValues>
+  </avrgcc.linker.libraries.Libraries>
+  <avrgcc.assembler.debugging.DebugLevel>Default (-g2)</avrgcc.assembler.debugging.DebugLevel>
+</AvrGcc>
+    </ToolchainSettings>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="AVRGCC2.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Drivers\Config.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Drivers\HAL\DateTime.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Drivers\HAL\DateTime.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Drivers\HAL\Light.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Drivers\HAL\Light.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Drivers\HAL\RTC.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Drivers\HAL\RTC.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Drivers\MCAL\ADC.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Drivers\MCAL\ADC.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Drivers\MCAL\segment_driver.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Drivers\MCAL\segment_driver.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Drivers\MCAL\Timer0.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Drivers\MCAL\Timer0.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Drivers\MCAL\Timer1.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Drivers\MCAL\Timer1.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Drivers\STDLib.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="osa.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="osa.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="OSAcfg.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Tasks.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Tasks.h">
+      <SubType>compile</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Drivers" />
+    <Folder Include="Drivers\MCAL" />
+    <Folder Include="Drivers\HAL" />
+  </ItemGroup>
+  <Import Project="$(AVRSTUDIO_EXE_PATH)\\Vs\\Compiler.targets" />
+</Project>
